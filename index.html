@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Weather App Prototype</title>
+    <!-- Link to Weather Icons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="weather-display">
+            <div class="top-section">
+                <i class="wi wi-day-sunny weather-icon"></i>
+                <p>Philadelphia</p>
+                <p class="temperature">70°F</p>
+                <p class="weather-condition">Clear</p>
+                <p class="temperature-range">L:65°F H:75°F</p>
+            </div>
+
+            <div class="description-section">
+                <p>Clear conditions will continue for the rest of the day. Wind gusts are up to 11 km/h.</p>
+            </div>
+
+            <!-- Scrollable Hourly Forecast -->
+            <div class="hourly-forecast">
+                <div class="hour">
+                    <p>Now</p>
+                    <i class="wi wi-day-sunny weather-icon"></i>
+                    <p>70°F</p>
+                </div>
+                <div class="hour">
+                    <p>8PM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>68°F</p>
+                </div>
+                <div class="hour">
+                    <p>9PM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>65°F</p>
+                </div>
+                <div class="hour">
+                    <p>10PM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>60°F</p>
+                </div>
+                <div class="hour">
+                    <p>11PM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>58°F</p>
+                </div>
+                <div class="hour">
+                    <p>12AM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>56°F</p>
+                </div>
+                <div class="hour">
+                    <p>1AM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>55°F</p>
+                </div>
+                <div class="hour">
+                    <p>2AM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>53°F</p>
+                </div>
+                <div class="hour">
+                    <p>3AM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>52°F</p>
+                </div>
+                <div class="hour">
+                    <p>4AM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>51°F</p>
+                </div>
+                <div class="hour">
+                    <p>5AM</p>
+                    <i class="wi wi-night-clear weather-icon"></i>
+                    <p>50°F</p>
+                </div>
+                <div class="hour">
+                    <p>6AM</p>
+                    <i class="wi wi-day-sunny weather-icon"></i>
+                    <p>51°F</p>
+                </div>
+                <div class="hour">
+                    <p>7AM</p>
+                    <i class="wi wi-day-sunny weather-icon"></i>
+                    <p>55°F</p>
+                </div>
+                <div class="hour">
+                    <p>8AM</p>
+                    <i class="wi wi-day-sunny weather-icon"></i>
+                    <p>60°F</p>
+                </div>
+            </div>
+
+            <!-- Horizontal Scrollable 7-Day Forecast -->
+            <div class="forecast-section">
+                <h3>7-Day Forecast</h3>
+                <div class="daily-forecast">
+                    <div class="day">
+                        <p>Fri</p>
+                        <i class="wi wi-day-sunny weather-icon"></i>
+                        <p class="temp-range">60°F / 80°F</p>
+                    </div>
+                    <div class="day">
+                        <p>Sat</p>
+                        <i class="wi wi-day-sunny weather-icon"></i>
+                        <p class="temp-range">50°F / 88°F</p>
+                    </div>
+                    <div class="day">
+                        <p>Sun</p>
+                        <i class="wi wi-day-sunny weather-icon"></i>
+                        <p class="temp-range">1000°F / 9000°F</p>
+                    </div>
+                    <div class="day">
+                        <p>Mon</p>
+                        <i class="wi wi-day-cloudy weather-icon"></i>
+                        <p class="temp-range">-50°F / 0°F</p>
+                    </div>
+                    <div class="day">
+                        <p>Tue</p>
+                        <i class="wi wi-day-rain weather-icon"></i>
+                        <p class="temp-range">7°C / 13°C</p>
+                    </div>
+                    <div class="day">
+                        <p>Wed</p>
+                        <i class="wi wi-day-sunny weather-icon"></i>
+                        <p class="temp-range">100°K / 150°K</p>
+                    </div>
+                    <div class="day">
+                        <p>Thu</p>
+                        <i class="wi wi-day-sunny weather-icon"></i>
+                        <p class="temp-range">50°F / 50°F</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Input and More Button -->
+            <div class="location-more-section">
+                <div class="location-search">
+                    <input type="text" id="location-input" placeholder="Enter location">
+                    <button id="search-btn">Search</button>
+                </div>
+                <div class="more-info">
+                    <button id="more-btn">More</button>
+                </div>
+            </div>
+
+            <!-- Advanced Info Section -->
+            <div id="advanced-info" class="advanced-info hidden">
+                <p>UV Index: 3 (Moderate)</p>
+                <p>Humidity: 55%</p>
+                <p>Windspeed: 11 km/h</p>
+                <p>Pressure: 1015 hPa</p>
+                <p>Visibility: 10 km</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script src="script.js"></script>
+</body>
+
+</html>

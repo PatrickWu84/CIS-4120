@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #001c40;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    /* Enables vertical scrolling if content exceeds viewport */
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    /* Constrain width to iPhone size */
+    max-height: 800px;
+    /* Constrain height to iPhone size */
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto;
+    /* Enables internal scrolling if content exceeds the container height */
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.weather-display {
+    text-align: center;
+    color: white;
+}
+
+.location-search {
+    margin-bottom: 15px;
+}
+
+.location-search input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+}
+
+.location-search button {
+    padding: 10px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.top-section .temperature {
+    font-size: 4rem;
+    margin: 10px 0;
+}
+
+.top-section .weather-condition {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.top-section .temperature-range {
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.description-section {
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.hourly-forecast {
+    display: flex;
+    overflow-x: scroll;
+    /* Makes the hourly forecast scrollable horizontally */
+    padding: 10px;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hourly-forecast .hour {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.weather-icon {
+    font-size: 30px;
+    color: white;
+}
+
+.forecast-section {
+    margin-top: 20px;
+}
+
+.daily-forecast {
+    display: flex;
+    overflow-x: scroll;
+    /* Enables horizontal scrolling for 7-day forecast */
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.forecast-section .day {
+    text-align: center;
+    flex-shrink: 0;
+    width: 80px;
+}
+
+.forecast-section .temp-range {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.more-info-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#more-btn {
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.advanced-info {
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none;
+}
